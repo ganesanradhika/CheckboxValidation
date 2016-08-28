@@ -1,0 +1,73 @@
+<html>  
+<head>  
+<meta charset="UTF-8">  
+<title>jQuery</title>  
+<script src="./jquery-3.1.0.js"></script>  
+<script>  
+  
+
+
+$(document).ready(function(){  
+
+// logic to enable/disable the submit button based on the number
+// of checkboxes selected
+ 
+$("input[type=checkbox]").click(function () {  
+
+var numberOfCheckboxesSelected = $('input[type=checkbox]:checked').length; 
+
+if(numberOfCheckboxesSelected >1){
+
+$('input[type="submit"]').prop('disabled', false);
+
+}else{
+
+$('input[type="submit"]').prop('disabled', true);
+
+}
+});  
+  
+  
+});  
+
+
+
+  
+</script>  
+</head>  
+<body>  
+<center>
+
+<h2> Checkbox Validation</h2>
+</br>  
+</br>   
+
+</br>  
+</br>  
+
+</br>  
+</br>  
+ 
+</br>  
+</br> 
+<table>
+<tr><td><input id="checkme" type="checkbox" name="checkme"/></td><td>JQuery</td></tr>
+<tr><td><input id="checkme" type="checkbox" name="checkme"/> </td><td>ReactJs</td></tr>
+
+<tr><td><input id="checkme" type="checkbox" name="checkme"/></td><td>AngularJS</td></tr>
+
+<tr><td><input id="checkme" type="checkbox" name="checkme"/></td><td>ExtJs</td></tr>
+
+<tr><td><input id="checkme" type="checkbox" name="checkme"/></td><td>Plain Old JavaScript</td></tr>
+
+</table>
+
+</br>  
+</br>  
+</br>  
+</br>  
+<input type="submit" value="Click on checkboxes to enable me ..." id="myButton" disabled="true"/>  
+  
+</center>
+</body>  
+</html>  
